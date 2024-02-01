@@ -2,6 +2,7 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 import { useBankData } from "../hooks/useBankData";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const onSuccess = () => {
@@ -27,13 +28,19 @@ export const Home = () => {
         Bank Names
       </h1>
       <button onClick={refetch}>Fetch Banks</button>
-      {/* {data?.data.map((bankName) => {
-        return <div key={bankName.code}>{bankName.name}</div>;
-      })} */}
-
-      {data.map((bankNames) => {
-        return <div key={bankNames}>{bankNames}</div>;
+      {data?.data.map((bankName) => {
+        return (
+          <div key={bankName.code}>
+            <Link to={`/bank-details/${bankName.id}`} className="underline">
+              {bankName.name}
+            </Link>
+          </div>
+        );
       })}
+
+      {/* {data.map((bankNames) => {
+        return <div key={bankNames}>{bankNames}</div>;
+      })} */}
     </>
   );
 };

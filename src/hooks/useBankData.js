@@ -17,16 +17,15 @@ export const useBankData = (onError, onSuccess) => {
     //   enabled: false,
     onError,
     onSuccess,
-    select: (data) => {
-      const bankNames = data.data.map((bank) => bank.name);
-      return bankNames;
-    },
+    // select: (data) => {
+    //   const bankNames = data.data.map((bank) => bank.name);
+    //   return bankNames;
+    // },
   });
 };
 
-export const useBankGateway = (enabled,data) => {
+export const useBankGateway = (enabled) => {
   return useQuery("gateways", fetchBanks, {
     enabled: enabled,
-    data,
   });
 };

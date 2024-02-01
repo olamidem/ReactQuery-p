@@ -4,6 +4,8 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { Home } from "./pages/Home";
 import { Code } from "./pages/Code";
 import { Gateway } from "./pages/Gateway";
+import { BankDetails } from "./pages/bankDetails";
+import { ParallelQuery } from "./pages/ParallelQuery";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,12 @@ function App() {
                 >
                   Gateway
                 </Link>
+                <Link
+                  to="/parallel-query"
+                  className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
+                >
+                  Parallel Query
+                </Link>
               </div>
             </div>
           </nav>
@@ -41,6 +49,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/code" element={<Code />} />
             <Route path="/gateway" element={<Gateway />} />
+            <Route path="/parallel-query" element={<ParallelQuery />} />
+            <Route path="/bank-details/:bankId" element={<BankDetails />} />
           </Routes>
         </Router>
         <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
