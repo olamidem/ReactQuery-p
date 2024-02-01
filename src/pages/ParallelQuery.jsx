@@ -12,5 +12,6 @@ const fetchBanks = async () => {
 export const ParallelQuery = () => {
   useQuery("banks", fetchBanks);
   useQuery("users", fetchUsers);
+
   return <div>ParallelQuery</div>;
 };

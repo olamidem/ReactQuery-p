@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useBankDetails } from "../hooks/useBankdetails";
+import { useBankDetails } from "../hooks/useBankDetails";
 
 export const BankDetails = () => {
   const { bankId } = useParams();

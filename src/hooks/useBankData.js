@@ -1,11 +1,9 @@
 /* eslint-disable no-empty-pattern */
 import axios from "axios";
 import { useQuery } from "react-query";
-
 const fetchBanks = () => {
   return axios.get("http://localhost:4000/data");
 };
-
 export const useBankData = (onError, onSuccess) => {
   return useQuery("banks", fetchBanks, {
     // cacheTime:5000,
@@ -29,3 +27,4 @@ export const useBankGateway = (enabled) => {
     enabled: enabled,
   });
 };
+

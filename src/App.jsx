@@ -6,6 +6,8 @@ import { Code } from "./pages/Code";
 import { Gateway } from "./pages/Gateway";
 import { BankDetails } from "./pages/bankDetails";
 import { ParallelQuery } from "./pages/ParallelQuery";
+import { DynamicParallelQuery } from "./pages/DynamicParallelQuery";
+import { DependentQueries } from "./pages/DependentQueries";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +43,12 @@ function App() {
                 >
                   Parallel Query
                 </Link>
+                <Link
+                  to="/dynamic-parallel-query"
+                  className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
+                >
+                  Parallel Query
+                </Link>
               </div>
             </div>
           </nav>
@@ -50,6 +58,14 @@ function App() {
             <Route path="/code" element={<Code />} />
             <Route path="/gateway" element={<Gateway />} />
             <Route path="/parallel-query" element={<ParallelQuery />} />
+            <Route
+              path="/dynamic-parallel-query"
+              element={<DynamicParallelQuery bankIds={[3, 5, 55]} />}
+            />
+            <Route
+              path="/dependent-query"
+              element={<DependentQueries email={"test@test.com"} />}
+            />
             <Route path="/bank-details/:bankId" element={<BankDetails />} />
           </Routes>
         </Router>

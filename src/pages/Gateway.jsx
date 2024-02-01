@@ -15,7 +15,7 @@ export const Gateway = () => {
         Get Bank Gateway
       </button>
 
-      {data?.data.map((code) => {
+      {data && data.data.map((code) => {
         return <div key={code.code}>{code.gateway}</div>;
       })}
     </>
