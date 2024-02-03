@@ -2455,5 +2455,47 @@
       "id": "test",
       "courses": ["react", "vue", "angular"]
     }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "Red"
+    },
+    {
+      "id": 2,
+      "label": "Blue"
+    },
+    {
+      "id": 3,
+      "label": "Green"
+    },
+    {
+      "id": 4,
+      "label": "Yellow"
+    },
+    {
+      "id": 5,
+      "label": "Purple"
+    },
+    {
+      "id": 6,
+      "label": "Orange"
+    },
+    {
+      "id": 7,
+      "label": "Pink"
+    },
+    {
+      "id": 8,
+      "label": "Black"
+    },
+    {
+      "id": 9,
+      "label": "White"
+    },
+    {
+      "id": 10,
+      "label": "Brown"
+    }
   ]
 }

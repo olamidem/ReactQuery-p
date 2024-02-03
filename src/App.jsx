@@ -8,6 +8,7 @@ import { BankDetails } from "./pages/bankDetails";
 import { ParallelQuery } from "./pages/ParallelQuery";
 import { DynamicParallelQuery } from "./pages/DynamicParallelQuery";
 import { DependentQueries } from "./pages/DependentQueries";
+import { PaginateQueries } from "./pages/PaginateQueries";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,18 @@ function App() {
                   className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
                 >
                   Parallel Query
+                </Link>{" "}
+                <Link
+                  to="/dependent-query"
+                  className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
+                >
+                  Parallel Query
+                </Link>
+                <Link
+                  to="/paginated-query"
+                  className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
+                >
+                  Paginated Query
                 </Link>
               </div>
             </div>
@@ -67,6 +80,7 @@ function App() {
               element={<DependentQueries email={"test@test.com"} />}
             />
             <Route path="/bank-details/:bankId" element={<BankDetails />} />
+            <Route path="paginated-query" element={<PaginateQueries />} />
           </Routes>
         </Router>
         <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
