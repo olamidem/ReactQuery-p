@@ -9,6 +9,7 @@ import { ParallelQuery } from "./pages/ParallelQuery";
 import { DynamicParallelQuery } from "./pages/DynamicParallelQuery";
 import { DependentQueries } from "./pages/DependentQueries";
 import { PaginateQueries } from "./pages/PaginateQueries";
+import { InfiniteQueries } from "./pages/InfiniteQueries";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,12 @@ function App() {
                 >
                   Paginated Query
                 </Link>
+                <Link
+                  to="/infinite-query"
+                  className="block mt-4 ml-5 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
+                >
+                  Infinite Query
+                </Link>
               </div>
             </div>
           </nav>
@@ -81,6 +88,7 @@ function App() {
             />
             <Route path="/bank-details/:bankId" element={<BankDetails />} />
             <Route path="paginated-query" element={<PaginateQueries />} />
+            <Route path="infinite-query" element={<InfiniteQueries />} />
           </Routes>
         </Router>
         <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
