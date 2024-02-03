@@ -2513,6 +2513,10 @@
     {
       "id": "check",
       "label": "another"
+    },
+    {
+      "id": "brown-black",
+      "label": "goldred"
     }
   ]
 }

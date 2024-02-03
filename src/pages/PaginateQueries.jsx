@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useQuery, useMutation } from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 
 export const PaginateQueries = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -11,7 +11,13 @@ export const PaginateQueries = () => {
     return axios.post("http://localhost:4000/colors", color);
   };
 
-  const useAddColor = useMutation(addColor);
+  const queryClient = useQueryClient();
+
+  const useAddColor = useMutation(addColor, {
+    onSuccess: () => {
+      queryClient.invalidateQueries("colors");
+    },
+  });
   const { mutate } = useAddColor;
 
   const fetchColors = async (pageNumber) => {
