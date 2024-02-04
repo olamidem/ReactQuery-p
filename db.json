@@ -2458,11 +2458,7 @@
   "channels": [
     {
       "id": "test",
-      "courses": [
-        "react",
-        "vue",
-        "angular"
-      ]
+      "courses": ["react", "vue", "angular"]
     }
   ],
   "colors": [
@@ -2507,16 +2503,12 @@
       "label": "Brown"
     },
     {
-      "id": "ft",
-      "label": "tftf"
+      "id": "11",
+      "label": "test"
     },
     {
-      "id": "check",
-      "label": "another"
-    },
-    {
-      "id": "brown-black",
-      "label": "goldred"
+      "id": "12",
+      "label": "test"
     }
   ]
 }
